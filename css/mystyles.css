@@ -1,0 +1,284 @@
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --text: #040005;
+    --background: #f8e0ff;
+    --primary: #5ffd2b;
+    --secondary: #efc3fe;
+    --accent: #3ef202;
+  }
+} */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fefaff;
+    --background: #17001e;
+    --primary: #37d402;
+    --secondary: #2e013d;
+    --accent: #49fd0d;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700|Roboto Mono:400');
+.body {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3.053rem; /* 48.8px */}
+
+h2 {font-size: 2.442rem; /* 39.04px */}
+
+h3 {font-size: 1.954rem; /* 31.2px */}
+
+h4 {font-size: 1.563rem; /* 24.96px */}
+
+h5 {font-size: 1.250rem; /* 20px */}
+
+small {font-size: 0.800rem; /* 12.8px */}
+
+.body {
+  background-color: var(--background);
+}
+
+.hide {
+  display: none;
+}
+
+#the-current-city {
+  width: clamp(20%, 40%, 60%);
+  background-color: var(--secondary);
+  border: 4px solid var(--accent);
+  color: var(--text);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.todays-weather {
+  padding: 30px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  border: 4px solid var(--accent);
+  border-radius: 10px;
+  font-size: clamp(1em, 1.3em, 3em);
+}
+
+/* when the user hovers over the div tag */
+.todays-weather:hover {
+  background-color: var(--primary);
+  color: #000;
+  transition: ease-in-out 0.3s;
+}
+
+/* when their mouse leaves the div tag */
+.todays-weather:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.daily-forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.middle-tags {
+  padding: 20px 0px;
+  margin: 15px 10px;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  border: 4px solid var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: clamp(1em, 1.3em, 3em);
+}
+
+.middle-tags:hover {
+  background-color: var(--primary);
+  color: #000;
+  transition: ease-in-out 0.3s;
+}
+
+.middle-tags:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.hourly-forecast {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.forecasts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 5px;
+}
+
+.hourly-cards {
+  padding: 15px 0px;
+  margin: 15px 8px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  border: 3px solid var(--accent);
+  border-radius: 10px;
+}
+
+.hourly-cards:hover {
+  background-color: var(--primary);
+  color: #000;
+  transition: ease-in-out 0.3s;
+}
+
+.hourly-cards:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.tomorrow-hourly-forecast {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.overmorrow-hourly-forecast {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.nav-bar {
+  background-color: var(--secondary);
+  border: 5px solid var(--accent);
+  border-radius: 10px;
+  margin: 5px auto;
+  padding: 5px;
+  width: clamp(40%, 65%, 80%);
+  height: clamp(35px, 70px, 105px);
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar h4 {
+  margin-right: 380px;
+}
+
+/* fa means Font Awesome. 
+its where i go the icons from.
+fa-solid is all of them because its the free version */
+.fa-solid {
+  margin: 0 15px;
+}
+
+/* fa-sun is customising the sun specifically */
+.fa-sun {
+  color: var(--primary);
+}
+
+/* when the mouse hovers over it */
+.fa-sun:hover {
+  color: #e3e015;
+  transition: ease-in-out 0.3s;
+}
+
+/* when the mouse is no longer hovering, it slowly changes back instead of instantly.
+makes it look better */
+.fa-sun:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.fa-house-chimney {
+  color: var(--accent);
+}
+
+.fa-house-chimney:hover {
+  color: var(--primary);
+  transition: ease-in-out 0.3s;
+}
+
+.fa-house-chimney:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.fa-magnifying-glass {
+  color: var(--accent);
+}
+
+.fa-magnifying-glass:hover {
+  color: var(--primary);
+  transition: ease-in-out 0.3s;
+}
+
+.fa-magnifying-glass:not(:hover) {
+  transition: ease-in-out 0.5s;
+}
+
+.search-bar {
+  background-color: var(--secondary);
+  border: 4px solid var(--accent);
+  color: var(--text);
+  border-radius: 10px;
+  margin: 7px auto;
+  padding: 10px;
+  width: clamp(40%, 50%, 75%);
+  display: flex;
+} 
+
+.btnSearch {
+  background-color: transparent;
+  width: clamp(10%, 20%, 30%);
+  border: none;
+  border-left: 2px solid var(--accent);
+  margin: 0 7px;
+  padding: 20px 50px;
+  font-size: 2em;
+}
+
+.fa-angles-right {
+  color: var(--accent);
+}
+.fa-angles-right:hover {
+  color: var(--primary);
+  transition: ease-in-out 0.3s;
+}
+
+.fa-angles-right:not(:hover) {
+  transition: ease-in-out 0.5s;
+
+}
+
+.location {
+  border-right: 2px solid var(--accent);
+  width: clamp(10%, 20%, 30%);  
+  padding: 20px 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 7px;
+  font-weight: 600;
+}
+
+.search-area {
+  background-color: var(--primary);
+  width: 60%;
+  margin: 5px 10px;
+  font-size: 1.6em;
+}

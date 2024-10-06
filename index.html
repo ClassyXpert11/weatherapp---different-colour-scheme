@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mystyles.css" />
+    <link rel="shortcut icon" href="images/meteor-solid.svg" type="image/svg">
+    <title>Abdullah's weather app</title>
+  </head>
+
+  <nav class="nav-bar">
+      <h4 class="nav-logo"><i class="fa-solid fa-sun fa-spin fa-3x" style="--fa-animation-duration: 2s; --fa-animation-iteration-count: 3;" title="Abdullah's Weather App"></i></h4>
+      <a href="index.html"><i class="fa-solid fa-house-chimney fa-2x" title="Home"></i></a>
+      <a href="search.html"><i class="fa-solid fa-magnifying-glass fa-2x" title="Search"></i></a>
+  </nav>
+
+  <body class="body">
+    <h3 class="current-city" id="the-current-city">city</h3>
+    <div class="todays-weather">
+      <span class="current-date">date</span>
+      <span class="icon"></span>
+      <span class="current-condition">condition</span>
+      <span class="current-temperature">temperature</span>
+      <span class="current-humidity">humidity</span>
+      <span class="last-updated">last updated</span>
+    </div>
+
+    <div class="daily-forecast">
+      <button class="middle-tags today-hourly" title="Today's hourly forecast!">
+      <div class="day-one">
+        <span class="todays-date"></span><br>
+        <span class="icon2"></span><br>
+        <span class="todays-condition"></span><br>
+        <span class="todays-temperature"></span><br>
+        <span class="todays-humidity"></span>
+      </div>
+      </button>
+      <button class="middle-tags tomorrow-hourly" title="Tomorrow's hourly forecast!">
+      <div class="day-two">
+        <span class="tomorrows-date"></span><br>
+        <span class="icon3"></span><br>
+        <span class="tomorrows-condition"></span><br>
+        <span class="tomorrows-avg-temperature"></span><br>
+        <span class="tomorrows-humidity"></span>
+      </div>
+      </button>
+      <button class="middle-tags overmorrow-hourly" title="Overmorrow's hourly forecast!">
+      <div class="day-three">
+        <span class="overmorrows-date"></span><br>
+        <span class="icon4"></span><br>
+        <span class="overmorrows-condition"></span><br>
+        <span class="overmorrows-temperature"></span><br>
+        <span class="overmorrows-humidity"></span>
+      </div>
+      </button>
+    </div>
+
+    <div class="forecasts">
+      <div class="hourly-forecast"></div>
+      <div class="tomorrow-hourly-forecast"></div>
+      <div class="overmorrow-hourly-forecast"></div>
+    </div>
+    <script src="scripts/api.js"></script>
+    <script src="https://kit.fontawesome.com/0eeedcf8fa.js" crossorigin="anonymous"></script>
+  </body>
+</html>
